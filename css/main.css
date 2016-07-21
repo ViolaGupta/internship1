@@ -123,6 +123,9 @@ a:active {
 --*/
 #hero-area {
   position: relative;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    height: 600px;
 }
 #hero-area:before {
   content: "";
@@ -241,6 +244,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   padding-right: 30px;
   border-radius: 2px;
   padding-bottom: 50px;
+    height:150px;
 }
 #slider .block .owl-carousel .owl-pagination .active {
   background: #FF5333;
