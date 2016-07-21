@@ -30,13 +30,95 @@
     <script src="js/plugins.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
+        <style>
+            #searchbar{
+                position: absolute;
+                padding-top: 10px;
+            }
+            #overlay    {  
+                background:rgba(0,0,0,.75);
+                text-align:center;
+                padding:45px 0 66px 0;
+                opacity:0;
+                -webkit-transition: opacity .25s ease;
+                -moz-transition: opacity .25s ease;
+            }
+
+            #box1:hover #overlay {
+                 opacity:1;
+            }
+            #box1    {  
+                 background:url(images/slider/slider-img-1.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box2:hover #overlay {
+                 opacity:1;}
+            #box2    {  
+                 background:url(images/slider/slider-img-2.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box3:hover #overlay {
+                 opacity:1;}
+            #box3    {  
+                 background:url(images/slider/slider-img-3.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box4:hover #overlay {
+                 opacity:1;}
+            #box4    {  
+                 background:url(images/slider/slider-img-4.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box5:hover #overlay {
+                 opacity:1;}
+            #box5    {  
+                 background:url(images/slider/slider-img-1.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box6:hover #overlay {
+                 opacity:1;}
+            #box6    {  
+                 background:url(images/slider/slider-img-2.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            #box7:hover #overlay {
+                 opacity:1;}
+            #box7    {  
+                 background:url(images/slider/slider-img-3.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            slidertext{
+                color: white;
+            }
+            #box8:hover #overlay {
+                 opacity:1;}
+            #box8    {  
+                 background:url(images/slider/slider-img-4.jpg);
+                 background-size:cover;
+                 overflow:hidden;
+                 margin-right: 10px;}
+            slidertext{
+                color: white;
+            }
+        </style>
 	</head>
 	<body>
 	<!--
 	header-img start 
 	============================== -->
     <section id="hero-area">
+       <div id="searchbar" class="col-xs-3 col-sm-4 col-xs-offset-4">
+        <input   type="text" name="search" placeholder="Search.." size="30">
+        </div>
       <img class="img-responsive" src="images/header.jpg" alt="">
+       
     </section>
 	<!--
     Header start 
@@ -89,32 +171,40 @@
                 <div class="col-md-12">
                     <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="title">
-                            <h3>Featured <span>Works</span></h3>
+                            <h3>BEST <span>RESTAURANTS</span></h3>
                         </div>
                         <div id="owl-example" class="owl-carousel">
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                            <div id="box1">
+                                
+                                <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Delhi NCR</h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                            <div id="box2"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Mumbai </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                            <div id="box3"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Kolkata </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                            <div id="box4"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Bangalore </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                            <div id="box5"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Pune </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                            <div id="box6"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Hyderabad </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                            <div id="box7"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in Chennai </h3></div>
                             </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                            <div id="box8"> 
+                               
+                                 <div id="overlay"><h3 id="slidertext" style="color:white;">Best restaurants in visakhapatnam </h3></div>
                             </div>
                         
                         </div>
