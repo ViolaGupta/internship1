@@ -31,19 +31,34 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
         <style>
-           
+  
     .outsidebox{
-        background-color: black;
+        position: relative;
+        
         min-height: 110px;
-        opacity: 0.7;
+        
         font-family: ;
         margin-top: 260px;
-        padding: 10px;
+        
         
     }
-    
+            .bg{
+                border-radius: 5px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                opacity: 0.5;
+                 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+            }
     .innerwrapper{
-        padding: 10px;
+                font-family: myfont;
+
+       
         padding-bottom: 10px;
      
     }
@@ -52,19 +67,22 @@
         padding:3px;
         height: 60px;
         float: left;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right ;
         
-        
+        -webkit-appearance: none;
+        border-radius: 5px 0px 0px 5px;
         margin:0;
         font-size: 16px;
         border: 0;
         background-color: white;
-        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+      /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd; */
+        background-color: white;
         -webkit-appearance: none;
   
 }
     .locality{
         float: left;
-        padding-left: 5px;
+        padding-left: 10px;
        
         margin: 0;
         
@@ -80,34 +98,14 @@
         height: 60px;
     font-size: 16px;
   
-    
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px;
+   
    
         background-color: darkgray; 
         color: black;
     }
-            .container-fluid{
-                width: 100%;
-            }
-   #section-area ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    float: left;
-        width: 100%;
-}
-  #section-area  li{
-        float: left;
-    }
-
-#section-area li a {
-    display: block;
-    color: white;
-    text-align: center;
+            
    
-    text-decoration: none;
-}
            
             #overlay    {  
                 background:rgba(0,0,0,.75);
@@ -199,13 +197,14 @@
 	header-img start 
 	============================== -->
     <section id="hero-area">
-        <div class="outsidebox col-xs-6 col-xs-offset-3">
+        <div class="outsidebox col-xs-10 col-xs-offset-1">
+            <div class="bg"></div>
     <div class="innerwrapper col-xs-12">
-        <h1 style="color:white; text-align:center; ">Search</h1>
+        <h4 style="color:white; text-align:center; font-family:Arial, Helvetica, sans-serif ;padding-top:10px; padding-bottom:10px; font-size:25px">Best Restaurants in Town</h4>
     
        <div class="row">
                  <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" >
-                     <option value="Bangalore">Choose City</option>
+                     <option value="Bangalore">Choose City</option><span class="caret"></span> 
                      <option value="Bangalore">Bangalore</option>
                      <option value="New Delhi">New delhi</option>
                      <option value="Mumbai">Mumbai</option>
@@ -216,7 +215,7 @@
                      <option value="Hyderabad">Visakhapatnam</option>
                  </select>
 
-              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location" autocomplete="off">
+              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location (landmark,road,area)" autocomplete="off">
                   
                
                   <input type="button" value="Search" class="col-sm-3 col-xs-12  btn-black">
