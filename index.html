@@ -37,15 +37,15 @@
         min-height: 110px;
         opacity: 0.7;
         font-family: ;
-        margin-top: 280px;
-        padding: 0px;
+        margin-top: 260px;
+        padding: 10px;
         
     }
     
     .innerwrapper{
-        padding: 0px;
+        padding: 10px;
         padding-bottom: 10px;
-       width: 100%;
+     
     }
     select {
         
@@ -53,7 +53,7 @@
         height: 60px;
         float: left;
         
-        width: 100%;
+        
         margin:0;
         font-size: 16px;
         border: 0;
@@ -65,7 +65,7 @@
     .locality{
         float: left;
         padding-left: 5px;
-        width: 100%;
+       
         margin: 0;
         
         height: 60px;
@@ -75,7 +75,7 @@
     }
     .btn-black{
         float: left;
-        width: 100%;
+       
     padding: 10px;
         height: 60px;
     font-size: 16px;
@@ -202,9 +202,9 @@
         <div class="outsidebox col-xs-6 col-xs-offset-3">
     <div class="innerwrapper col-xs-12">
         <h1 style="color:white; text-align:center; ">Search</h1>
-    <ul>
-        <li class="col-xs-12 col-sm-3 conatiner-fluid"><div>
-                 <select id="city" >
+    
+       <div class="row">
+                 <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" >
                      <option value="Bangalore">Choose City</option>
                      <option value="Bangalore">Bangalore</option>
                      <option value="New Delhi">New delhi</option>
@@ -215,16 +215,13 @@
                      <option value="Hyderabad">Kolkata</option>
                      <option value="Hyderabad">Visakhapatnam</option>
                  </select>
-                   </div></li>
-        <li class="col-xs-12 col-sm-6 conatiner-fluid"><div>
-              <input type="search" placeholder="Type Your location" class="locality" autocomplete="off">
+
+              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location" autocomplete="off">
                   
+               
+                  <input type="button" value="Search" class="col-sm-3 col-xs-12  btn-black">
                 </div>
-            </li>
-        <li class="col-sm-3 col-xs-12 conatiner-fluid"><div>
-                  <input type="button" value="Search" class="btn-black" >
-                </div></li>
-    </ul>
+    
         </div>
     </div>
       
