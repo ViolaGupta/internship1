@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Restaurant One Page HTML5 Template</title>
+		<title>Best Restaurants In India</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS
@@ -31,65 +31,71 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
         <style>
-            
+           
     .outsidebox{
         background-color: black;
-        width:900px;
-        padding-left: 80px;
-        height: 180px;
-       opacity: 0.7;
-        margin-top: 160px;
+        min-height: 140px;
+        opacity: 0.7;
+        
+        margin-top: 280px;
+        padding: 0px;
         
     }
     
     .innerwrapper{
-        padding-top: 10px;
-        
+        padding: 0px;
+        padding-bottom: 10px;
+       width: 100%;
     }
     select {
-    width: 180px;
-    padding: 10px;
-        height: 30px;
-    font-size: 16px;
-  
-    border: 0;
-    border-radius: 5px;
-    height: 60px;
+        
+        padding:3px;
+        height: 60px;
+        float: left;
+        
+        width: 100%;
+        margin:0;
+        font-size: 16px;
+        border: 0;
         background-color: white;
-    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
-    -webkit-appearance: none;
-    background-position-x: 244px;
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+        -webkit-appearance: none;
+  
 }
     .locality{
-       width: 320px;
-    padding: 10px;
-        height: 30px;
-    font-size: 16px;
-  
-    border: 0;
-    border-radius: 5px;
-    height: 60px;
+        float: left;
+        padding-left: 5px;
+        width: 100%;
+        margin: 0;
+        
+        height: 60px;
+        font-size: 16px;
+        border: 0;
         background-color: lightgrey; 
-        color: black;
     }
     .btn-black{
-           width: 270px;
+        float: left;
+        width: 100%;
     padding: 10px;
-        height: 30px;
+        height: 60px;
     font-size: 16px;
   
-    border: 0;
+    
     border-radius: 5px;
-    height: 60px;
+   
         background-color: darkgray; 
         color: black;
     }
+            .container-fluid{
+                width: 100%;
+            }
     ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
-    
+    float: left;
+        width: 100%;
 }
     li{
         float: left;
@@ -99,13 +105,10 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+   
     text-decoration: none;
 }
-            #searchbar{
-                position: absolute;
-                padding-top: 10px;
-            }
+           
             #overlay    {  
                 background:rgba(0,0,0,.75);
                 text-align:center;
@@ -195,11 +198,12 @@ li a {
 	header-img start 
 	============================== -->
     <section id="hero-area">
-        <div class="outsidebox col-xs-6 col-xs-offset-2">
-    <div class="innerwrapper">
-        <h1 style="color:white; text-align:center;">Search</h1>
-        <ul class="btn-group"><li><div class="large-3 medium-3 columns">
-                 <select id="city" class="selectcity">
+        <div class="outsidebox col-xs-6 col-xs-offset-3">
+    <div class="innerwrapper col-xs-12">
+        <h1 style="color:white; text-align:center; ">Search</h1>
+    <ul>
+        <li class="col-xs-12 col-sm-3 conatiner-fluid"><div>
+                 <select id="city" >
                      <option value="Bangalore">Choose City</option>
                      <option value="Bangalore">Bangalore</option>
                      <option value="New Delhi">New delhi</option>
@@ -211,14 +215,15 @@ li a {
                      <option value="Hyderabad">Visakhapatnam</option>
                  </select>
                    </div></li>
-        <li><div class="large-6 medium-6 columns">
-              <input type="search" Value="Type Your location" class="locality" autocomplete="off">
+        <li class="col-xs-12 col-sm-6 conatiner-fluid"><div>
+              <input type="search" placeholder="Type Your location" class="locality" autocomplete="off">
                   
                 </div>
             </li>
-        <li><div class="large-3 medium-3 columns">
-                  <input type="button" value="Search" class="btn-black" disabled="disabled">
-                </div></li></ul>
+        <li class="col-sm-3 col-xs-12 conatiner-fluid"><div>
+                  <input type="button" value="Search" class="btn-black" >
+                </div></li>
+    </ul>
         </div>
     </div>
       
