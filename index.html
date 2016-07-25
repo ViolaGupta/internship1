@@ -203,8 +203,9 @@
         <h4 style="color:white; text-align:center; font-family:Arial, Helvetica, sans-serif ;padding-top:10px; padding-bottom:10px; font-size:25px">Best Restaurants in Town</h4>
     
        <div class="row">
-                 <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" >
-                     <option value="Bangalore">Choose City</option><span class="caret"></span> 
+           <form action="searchresult.php" method="POST" >
+                 <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" name="city">
+                     <option value="">Choose City</option><span class="caret"></span> 
                      <option value="Bangalore">Bangalore</option>
                      <option value="New Delhi">New delhi</option>
                      <option value="Mumbai">Mumbai</option>
@@ -215,10 +216,11 @@
                      <option value="Hyderabad">Visakhapatnam</option>
                  </select>
 
-              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location (landmark,road,area)" autocomplete="off">
+              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location (landmark,road,area)" autocomplete="off" name="locality">
                   
                
-                  <input type="button" value="Search" class="col-sm-3 col-xs-12 btn">
+                  <input type="submit" name="submit" value="Search" class="col-sm-3 col-xs-12 btn">
+               </form>
                 </div>
     
         </div>
