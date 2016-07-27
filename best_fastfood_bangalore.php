@@ -244,7 +244,7 @@
    }
  
    
-            echo "<br>";
+            
    $geometry = $response['results'][0]['geometry'];
  
     $longitude = $geometry['location']['lng'];
@@ -263,9 +263,9 @@
 $city = empty($_POST['locality']) ? "Bangalore" :  $_POST['locality'].','.$_POST['city'];
  
 $array = lookup($city);
- print $array['latitude']."<br>".$array['longitude']."<br>";
+// print $array['latitude']."<br>".$array['longitude']."<br>";
  
- echo $city."<br>";
+ // echo $city."<br>";
 // Get cURL resource
        
 $category = !empty($_POST['category']) ? $_POST['category'] : 2;
@@ -273,7 +273,7 @@ $category = !empty($_POST['category']) ? $_POST['category'] : 2;
         $order = !empty($_POST['order']) ? $_POST['order'] : 'desc';
         $cuisine = !empty($_POST['cuisine']) ? $_POST['cuisine'] : 40 ;
          $curl = curl_init();
-echo $category."<br>".$order."<br>".$cuisine."<br>".$sort;
+// echo $category."<br>".$order."<br>".$cuisine."<br>".$sort;
 // Curl options
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => true,
@@ -295,7 +295,7 @@ curl_close($curl);
 // dumping $resp
 // echo 'var_dump: <br>';
 // var_dump($resp);
-echo '<br><br>';
+
 
 // Decode json
 $jsonZomato = json_decode($resp, true);

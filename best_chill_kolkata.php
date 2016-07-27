@@ -244,7 +244,7 @@
    }
  
    
-            echo "<br>";
+          
    $geometry = $response['results'][0]['geometry'];
  
     $longitude = $geometry['location']['lng'];
@@ -263,22 +263,22 @@
 $city = empty($_POST['locality']) ? "Kolkata" :  $_POST['locality'].','.$_POST['city'];
  
 $array = lookup($city);
- print $array['latitude']."<br>".$array['longitude']."<br>";
+// print $array['latitude']."<br>".$array['longitude']."<br>";
  
- echo $city."<br>";
+// echo $city."<br>";
 // Get cURL resource
        
-$category = !empty($_POST['category']) ? $_POST['category'] : 4;
+$category = !empty($_POST['category']) ? $_POST['category'] : 3;
         $sort = !empty($_POST['sort']) ? $_POST['sort'] : 'rating';
         $order = !empty($_POST['order']) ? $_POST['order'] : 'desc';
         $cuisine = !empty($_POST['cuisine']) ? $_POST['cuisine'] : '' ;
          $curl = curl_init();
-echo $category."<br>".$order."<br>".$cuisine."<br>".$sort;
+// echo $category."<br>".$order."<br>".$cuisine."<br>".$sort;
 // Curl options
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER => ['Accept: application/json', 'user-key: 3b659dd898c0058acd1d609a02a02d3c'],
-    CURLOPT_URL => 'https://developers.zomato.com/api/v2.1/search?entity_type=subzone&cuisines='.$cuisine.'&count=50&lat='.$array['latitude'].'&lon='.$array['longitude'].'&radius=4000&category='.$category.'&sort='.$sort.'&order='.$order,
+    CURLOPT_URL => 'https://developers.zomato.com/api/v2.1/search?entity_type=city&cuisines='.$cuisine.'&count=50&lat='.$array['latitude'].'&lon='.$array['longitude'].'&radius=4000&category='.$category.'&sort='.$sort.'&order='.$order,
 ));
 
 // Send the request & save response to $resp
@@ -295,7 +295,7 @@ curl_close($curl);
 // dumping $resp
 // echo 'var_dump: <br>';
 // var_dump($resp);
-echo '<br><br>';
+
 
 // Decode json
 $jsonZomato = json_decode($resp, true);
