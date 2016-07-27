@@ -101,7 +101,7 @@
     border-radius: 0px 5px 5px 0px;
    
    
-        background-color: darkcyan; 
+        background-color: darkgray; 
         color: black;
     }
             
@@ -111,121 +111,7 @@
     </head>
     <body>
 
-        <section id="hero-area">
-             
-        <div class="outsidebox col-xs-10 col-xs-offset-1">
-            <div class="bg"></div>
-    <div class="innerwrapper col-xs-12">
-        <h4 style="color:white; text-align:center; font-family:Arial, Helvetica, sans-serif ;padding-top:10px; padding-bottom:10px; font-size:25px">Best Restaurants in Town</h4>
-    
-       <div class="row">
-           <form  method="POST" action="api.php" >
-   <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" name="city">
-                     <option value="">Choose City</option><span class="caret"></span> 
-                     <option  selected="selected" value="Bangalore">Bangalore</option>
-                     <option value="New Delhi">New delhi</option>
-                     <option value="Mumbai">Mumbai</option>
-                     <option value="Pune">Pune</option>
-                     <option value="Chennai">Chennai</option>
-                     <option value="Hyderabad">Hyderabad</option>
-                     <option value="Kolkata">Kolkata</option>
-                     <option value="Visakhapatnam">Visakhapatnam</option>
-                 </select>
-
-              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location (landmark,road,area)" autocomplete="off" name="locality">
-                  
-               
-                  <input type="submit" name="submit" value="Search" class="col-sm-3 col-xs-12 btn">
-              
-     <select class=" col-xs-3" style="background-color:maroon; color:white; border-radius:20px padding:10px; margin-top:5px;" id="category" name="category">
-                     <option >Category</option><span class="caret"></span>
-                     <option value="3">Nightlife</option>
-                     <option value="4">Catching-up</option>
-                     <option value="5">Takeaway</option>
-                     <option value="6">Cafes</option>
-                     <option value="8">Breakfast</option>
-                     <option value="9">Lunch</option>
-                     <option value="10">Dinner</option>
-         <option value="11">Pubs & Bars</option>
-                       <option value="1">Home Delivery</option>   
-         <option value="2">Dine-out</option> 
-                 </select>
- 
-              
-     <select class="col-xs-3" style="background-color:maroon; color:white; border-radius:0px 0px 0px 0px; padding:10px; margin-top:5px;" id="sort" name="sort">
-                     <option  >Sort</option><span class="caret"></span>
-                     <option value="cost">Cost</option>
-                     <option value="rating" >Rating</option>
-    </select>
- 
-
-     <select class="col-xs-3" style="background-color:maroon; color:white; border-radius:0px 0px 0px 0px; padding:10px; margin-top:5px;" id="order" name="order">
-    <option>Order</option> <span class="caret"></span>
-    <option value="desc">Descending</option>
-    <option value="asc">Ascending</option>
-        </select>
-
-
-    <select class="col-xs-3" style="background-color:maroon; color:white; border-radius:0px 5px 5px 0px;; padding:10px; margin-top:5px;" id="cuisine" name="cuisine">
-    <option>Cuisine</option><span class="caret"></span>
-    <option value="6">Afghani</option>
-        <option value="152">African</option>
-        <option value="1">American</option>
-        <option value="2">Andhra</option>
-        <option value="3">Asian</option>
-        <option value="165">Assamese</option>
-        <option value="5">Bakery</option>
-        <option value="270">Beverages</option>
-        <option value="10">Bengali</option>
-        <option value="7">Biryani</option>
-        <option value="168">Burger</option>
-        <option value="25">Chinese</option>
-        <option value="35">Continental</option>
-        <option value="100">Deserts</option>
-        <option value="100">Multiple cuisines</option>
-        <option value="268">Drinks only</option>
-        <option value="38">European</option>
-        <option value="40">Fast Food</option>
-        <option value="45">French</option>
-        <option value="48">Gujrati</option>
-        <option value="49">Hyderabadi</option>
-        <option value="233">Ice Cream parlour</option>
-        <option value="148">Indian</option>
-        <option value="55">Italian</option>
-        <option value="60">Japnese</option>
-        <option value="164">Juices</option>
-        <option value="65">Kashmiri</option>
-        <option value="66">Lebanese</option>
-        <option value="157">Lucknowi</option>
-        <option value="102">Maharashtrian</option>
-        <option value="70">Mediterranean</option>
-        <option value="73">Mexican</option>
-        <option value="137">Middle Eastern</option>
-        <option value="50">North Indian</option>
-        <option value="139">Pakistani</option>
-        <option value="290">Parsi</option>
-        <option value="81">Persian</option>
-        <option value="88">Rajasthani</option>
-        <option value="83">Seafood</option>
-        <option value="972">South American</option>
-        <option value="85">South Indian</option>
-        <option value="89">Spanish</option>
-        <option value="90">Street Food</option>
-        <option value="177">Sushi</option>
-        <option value="95">Thai</option>
-        <option value="93">Tibetan</option>
-        <option value="308">Vegetarian</option>
-        <option value="99">Vietnamese</option>
-        </select> 
-               </form>
-           
-                </div>
-    
-        </div>
-    </div>
-      
-       
-   </section>
+     
         <?php     
 
         function lookup($string){
@@ -310,249 +196,539 @@ print "</pre>";
 */
             ?>
   
-        <section id="blog">
+         <section id="blog">
+              <form  method="POST" >
+   <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" name="city">
+                     <option value="<?php echo $_POST['city'] ?>"><?php echo $_POST['city'] ?></option><span class="caret"></span> 
+                     <option value="Bangalore">Bangalore</option>
+                     <option value="New Delhi">New delhi</option>
+                     <option value="Mumbai">Mumbai</option>
+                     <option value="Pune">Pune</option>
+                     <option value="Chennai">Chennai</option>
+                     <option value="Hyderabad">Hyderabad</option>
+                     <option value="Kolkata">Kolkata</option>
+                     <option value="Visakhapatnam">Visakhapatnam</option>
+                 </select>
+
+              <input class="col-xs-12 col-sm-6  locality" type="search" placeholder="Type Your location (landmark,road,area)" autocomplete="off" name="locality">
+                  
+               
+                  <input type="submit" name="submit" value="Search" class="col-sm-3 col-xs-12 btn">
+              
+     <select class=" col-xs-3" style="background-color:darkcyan; color:white; border-radius:20px padding:10px;" id="category" name="category">
+                     <option >Category</option><span class="caret"></span>
+                     <option value="3">Nightlife</option>
+                     <option value="4">Catching-up</option>
+                     <option value="5">Takeaway</option>
+                     <option value="6">Cafes</option>
+                     <option value="8">Breakfast</option>
+                     <option value="9">Lunch</option>
+                     <option value="10">Dinner</option>
+         <option value="11">Pubs & Bars</option>
+                       <option value="1">Home Delivery</option>   
+         <option value="2">Dine-out</option> 
+                 </select>
+ 
+              
+     <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="sort" name="sort">
+                     <option  >Sort</option><span class="caret"></span>
+                     <option value="cost">Cost</option>
+                     <option value="rating" >Rating</option>
+    </select>
+ 
+
+     <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="order" name="order">
+    <option>Order</option> <span class="caret"></span>
+    <option value="desc">Descending</option>
+    <option value="asc">Ascending</option>
+        </select>
+
+
+    <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 5px 5px 0px;; padding:10px;" id="cuisine" name="cuisine">
+    <option>Cuisine</option><span class="caret"></span>
+    <option value="6">Afghani</option>
+        <option value="152">African</option>
+        <option value="1">American</option>
+        <option value="2">Andhra</option>
+        <option value="3">Asian</option>
+        <option value="165">Assamese</option>
+        <option value="5">Bakery</option>
+        <option value="270">Beverages</option>
+        <option value="10">Bengali</option>
+        <option value="7">Biryani</option>
+        <option value="168">Burger</option>
+        <option value="25">Chinese</option>
+        <option value="35">Continental</option>
+        <option value="100">Deserts</option>
+        <option value="100">Multiple cuisines</option>
+        <option value="268">Drinks only</option>
+        <option value="38">European</option>
+        <option value="40">Fast Food</option>
+        <option value="45">French</option>
+        <option value="48">Gujrati</option>
+        <option value="49">Hyderabadi</option>
+        <option value="233">Ice Cream parlour</option>
+        <option value="148">Indian</option>
+        <option value="55">Italian</option>
+        <option value="60">Japnese</option>
+        <option value="164">Juices</option>
+        <option value="65">Kashmiri</option>
+        <option value="66">Lebanese</option>
+        <option value="157">Lucknowi</option>
+        <option value="102">Maharashtrian</option>
+        <option value="70">Mediterranean</option>
+        <option value="73">Mexican</option>
+        <option value="137">Middle Eastern</option>
+        <option value="50">North Indian</option>
+        <option value="139">Pakistani</option>
+        <option value="290">Parsi</option>
+        <option value="81">Persian</option>
+        <option value="88">Rajasthani</option>
+        <option value="83">Seafood</option>
+        <option value="972">South American</option>
+        <option value="85">South Indian</option>
+        <option value="89">Spanish</option>
+        <option value="90">Street Food</option>
+        <option value="177">Sushi</option>
+        <option value="95">Thai</option>
+        <option value="93">Tibetan</option>
+        <option value="308">Vegetarian</option>
+        <option value="99">Vietnamese</option>
+        </select> 
+               </form>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                         <h1 class="heading">Best <span>Dine-OUT</span> in your <span>locality</span>
+                
+                    <div class="col-xs-12 ">
+                         <h1 class="heading">Best <span>Dine-Out</span> in your <span>locality</span>
                         </h1>
-                        <ul>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-                                <div class="blog-img">
-                                  <img src="images/blog/blog-img-1.jpg">
+                </div>
+                </div>
+            <div class="row">
+                        <ul class="media-list">
+                            <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
                                    
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][0]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][0]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][0]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][0]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][0]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][0]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][0]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][0]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][0]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][0]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][0]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][0]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-2.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][1]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][1]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][1]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][1]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][1]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][1]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <div class="content-left">
-                                    
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][2]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][2]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][2]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][2]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][2]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][2]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                              
+                            <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][1]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][1]['restaurant']['name'] ?></h3>
+                                     <br>
+                                    <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][1]['restaurant']['location']['city']  ?>
+                                    <br>
+                                    <p><span style="color:green;">Add:</span><span >  <?php echo $jsonZomato['restaurants'][1]['restaurant']['location']['address']?></span></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;">   <?php echo $jsonZomato['restaurants'][1]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][1]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-3.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <div class="content-left">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][3]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][3]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][3]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][3]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][3]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][3]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-4.jpg" alt="blog-img">
                                 </div>
                             </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-5.jpg" alt="blog-img">
+                            <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][2]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][2]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][2]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][2]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][2]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][2]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                               <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][4]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][4]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][4]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][4]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][4]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][4]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-6.jpg" alt="blog-img">
+                            <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][3]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][3]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][3]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][3]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][3]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][3]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][5]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][5]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][5]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][5]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][5]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][5]['restaurant']['average_cost_for_two'] ?></span><br></p>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][4]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][4]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][4]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][4]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][4]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][4]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                             <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][5]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][5]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][5]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][5]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][5]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][5]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
                                 </div>
                             </li>
                         </ul>
                                              <ul id="secondshift" class="collapse">
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-                                <div class="blog-img">
-                                  <img src="images/blog/blog-img-1.jpg">
+                                <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
                                    
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][6]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][6]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span>  <?php echo $jsonZomato['restaurants'][6]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][6]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][6]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"> <?php echo $jsonZomato['restaurants'][6]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][6]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][6]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][6]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][6]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][6]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][6]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-2.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][7]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][7]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][7]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][7]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][7]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][7]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <div class="content-left">
-                                    
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][8]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][8]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][8]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][8]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][8]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][8]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                              
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-3.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <div class="content-left">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][9]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][9]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][9]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][9]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][9]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][9]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-4.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-5.jpg" alt="blog-img">
-                                </div>
-                               <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][10]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][10]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][10]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][10]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][10]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][10]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-6.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][11]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][11]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][11]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][11]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][11]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][11]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                            </li>
-                             
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-                                <div class="blog-img">
-                                  <img src="images/blog/blog-img-1.jpg">
+                              <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
                                    
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][7]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][7]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span> <?php echo $jsonZomato['restaurants'][7]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][7]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][7]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"> <?php echo $jsonZomato['restaurants'][7]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][12]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][12]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][12]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][12]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][12]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][12]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-2.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][13]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][13]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][13]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][13]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][13]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][13]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <div class="content-left">
-                                    
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][14]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][14]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][14]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][14]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][14]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][14]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                              
+                              <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][8]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][8]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][8]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][8]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"> <?php echo $jsonZomato['restaurants'][8]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][8]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-3.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <div class="content-left">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][15]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][15]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][15]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][15]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][15]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][15]['restaurant']['average_cost_for_two'] ?></span><br></p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-4.jpg" alt="blog-img">
                                 </div>
                             </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-5.jpg" alt="blog-img">
+                                <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][9]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][9]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][9]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][9]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][9]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][9]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                               <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][16]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][16]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][16]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][16]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][16]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][16]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-6.jpg" alt="blog-img">
+                               <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][10]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][10]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][10]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][10]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][10]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][10]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
                                 </div>
-                                <div class="content-right">
-                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][11]['restaurant']['user_rating']['aggregate_rating'] ?></span>
-                                    <h3> <?php echo $jsonZomato['restaurants'][17]['restaurant']['name'] ?></h3>
-                                    <p><span style="color:green;">Add: </span> <?php echo $jsonZomato['restaurants'][17]['restaurant']['location']['address']?><br>
-                                        <span style="color:lightblue;"> City: </span><?php echo $jsonZomato['restaurants'][17]['restaurant']['location']['city']  ?>
-                                        <br>Cuisine: <span style="color:orange;"> <?php echo $jsonZomato['restaurants'][17]['restaurant']['cuisines']  ?></span><br>Price for two: <span class="label label-info"> <?php echo $jsonZomato['restaurants'][17]['restaurant']['average_cost_for_two'] ?></span><br></p>
                                 </div>
                             </li>
-                                                                   
+                             <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][11]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][11]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][11]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][11]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][11]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][11]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                               
+                              <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][12]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][12]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][12]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][12]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][12]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][12]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                                <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][13]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][13]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][13]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][13]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][13]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][13]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                               <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][14]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][14]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][14]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][14]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][14]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][14]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                               <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][15]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][15]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][15]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][15]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][15]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][15]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                                <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][16]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][16]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][16]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][16]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][16]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][16]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>
+                                 <li class="col-xs-12 col-sm-6"  >
+                              <div class="media-body">
+                                  <div class="row" >
+                                      <div class="col-xs-4">
+                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                   
+                                      </div>
+                                <div class="col-xs-8" style="padding-top:5px;">
+                                    <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][17]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
+                                    <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][17]['restaurant']['name'] ?></h3>
+                                    <br>
+                                    <p><span style="color:lightblue;">City:</span><?php echo $jsonZomato['restaurants'][17]['restaurant']['location']['city']  ?></p>
+                                    <p><span style="color:green;">Add:</span>  <?php echo $jsonZomato['restaurants'][17]['restaurant']['location']['address']?></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" style="padding-bottom:30px; padding-top:30px;">
+                                      <div class="col-xs-12" style="padding-left:30px;">
+                                      <h4>Cuisine:<span style="color:orange;"><?php echo $jsonZomato['restaurants'][17]['restaurant']['cuisines']  ?></span></h4><br>
+                                       <h4> <span>Price for two:</span> <span class="label label-info"><?php echo $jsonZomato['restaurants'][17]['restaurant']['average_cost_for_two'] ?></span></h4>
+                                      </div>
+                                </div>
+                                </div>
+                            </li>                     
                         </ul>
                         <a data-toggle="collapse" data-target="#secondshift" class="btn btn-default btn-more-info wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms"  role="button">More </a>
                     </div>
                 </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #blog close -->
+           
+    </section>
     </body>
 </html>
