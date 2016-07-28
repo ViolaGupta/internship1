@@ -38,7 +38,7 @@
          <section id="blog">
               <form  method="POST" >
    <select  class="col-xs-12 col-sm-3 conatiner-fluid" id="city" name="city">
-                     <option value="<?php echo $_POST['city'] ?>"><?php echo $_POST['city'] ?></option><span class="caret"></span> 
+                      <option value="">Choose City</option><span class="caret"></span>  
                      <option value="Bangalore">Bangalore</option>
                      <option value="New Delhi">New delhi</option>
                      <option value="Mumbai">Mumbai</option>
