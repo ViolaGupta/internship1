@@ -224,7 +224,7 @@ print "</pre>";
             <div class="row">
                 
                     <div class="col-xs-12 ">
-                         <h1 class="heading">Best <span>Dine-Out</span> in your <span>locality</span>
+                         <h1 class="heading" style="color:white;">Best <span>Dine-Out</span> in your <span>locality</span>
                         </h1>
                 </div>
                 </div>
