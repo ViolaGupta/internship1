@@ -65,7 +65,7 @@
     select {
         
         padding:3px;
-        height: 60px;
+        height: 45px;
         float: left;
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right ;
         
@@ -86,7 +86,7 @@
        
         margin: 0;
         
-        height: 60px;
+        height: 45px;
         font-size: 16px;
         border: 0;
         background-color: lightgrey; 
@@ -95,7 +95,7 @@
         float: left;
        border: 0;
     padding: 10px;
-        height: 60px;
+        height: 45px;
     font-size: 16px;
   
     border-radius: 0px 5px 5px 0px;
@@ -134,7 +134,7 @@
                
                   <input type="submit" name="submit" value="Search" class="col-sm-3 col-xs-12 btn">
               
-     <select class=" col-xs-3" style="background-color:darkcyan; color:white; border-radius:20px padding:10px;" id="category" name="category">
+     <select class=" col-xs-3" style="background-color:#FF5333; color:white; border-radius:20px padding:10px;" id="category" name="category">
                      <option >Category</option><span class="caret"></span>
                      <option value="3">Nightlife</option>
                      <option value="4">Catching-up</option>
@@ -149,21 +149,21 @@
                  </select>
  
               
-     <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="sort" name="sort">
+     <select class="col-xs-3" style="background-color:#FF5333; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="sort" name="sort">
                      <option  >Sort</option><span class="caret"></span>
                      <option value="cost">Cost</option>
                      <option value="rating" >Rating</option>
     </select>
  
 
-     <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="order" name="order">
+     <select class="col-xs-3" style="background-color:#FF5333; color:white; border-radius:0px 0px 0px 0px; padding:10px;" id="order" name="order">
     <option>Order</option> <span class="caret"></span>
     <option value="desc">Descending</option>
     <option value="asc">Ascending</option>
         </select>
 
 
-    <select class="col-xs-3" style="background-color:darkcyan; color:white; border-radius:0px 5px 5px 0px;; padding:10px;" id="cuisine" name="cuisine">
+    <select class="col-xs-3" style="background-color:#FF5333; color:white; border-radius:0px 5px 5px 0px;; padding:10px;" id="cuisine" name="cuisine">
     <option>Cuisine</option><span class="caret"></span>
     <option value="6">Afghani</option>
         <option value="152">African</option>
@@ -219,7 +219,7 @@
             <div class="row">
                 
                     <div class="col-xs-12 ">
-                         <h1 class="heading">Best <span>Dine-Out</span> in your <span>locality</span>
+                         <h1 class="heading" style="color:white;">Best <span>Dine-Out</span> in your <span>locality</span>
                         </h1>
                 </div>
                 </div>
@@ -228,11 +228,11 @@
                             <li class="col-xs-12 col-sm-6"  >
                               <div class="media-body">
                                   <div class="row" >
-                                      <div class="col-xs-4">
+                                      <div class="col-xs-6">
                                      <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
                                    
                                       </div>
-                                <div class="col-xs-8" style="padding-top:5px;">
+                                <div class="col-xs-6" style="padding-top:5px;">
                                     <span class="badge" style="background-color:darkcyan;"><?php echo $jsonZomato['restaurants'][0]['restaurant']['user_rating']['aggregate_rating'] ?></span><br>
                                     <h3 class="media-heading">  <?php echo $jsonZomato['restaurants'][0]['restaurant']['name'] ?></h3>
                                     <br>
@@ -252,7 +252,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-2.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -276,7 +276,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-3.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -299,7 +299,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-4.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -322,7 +322,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-5.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -345,7 +345,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-6.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -393,7 +393,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-2.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -416,7 +416,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-3.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -439,7 +439,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-4.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -462,7 +462,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-5.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -485,7 +485,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-6.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -532,7 +532,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-2.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -555,7 +555,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-3.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -578,7 +578,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-4.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -601,7 +601,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-5.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
@@ -624,7 +624,7 @@
                               <div class="media-body">
                                   <div class="row" >
                                       <div class="col-xs-4">
-                                     <img class="img-responsive" src="images/blog/blog-img-1.jpg" alt="blog-img">
+                                     <img class="img-responsive" src="images/blog/blog-img-6.jpg" alt="blog-img">
                                    
                                       </div>
                                 <div class="col-xs-8" style="padding-top:5px;">
