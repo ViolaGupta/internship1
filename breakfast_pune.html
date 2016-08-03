@@ -1,0 +1,633 @@
+
+<html >
+	<head>
+        	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Blog</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSS
+        ================================================ -->
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- bootstrap.min css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Font-awesome.min css -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Js -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+        <style>
+        body{
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                 background: url("images/9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  position: relative;
+            max-width: 100%;
+           overflow-x: hidden;
+                }
+            body:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+    background: url("../images/overlay-pattern.png") #000000;
+  opacity: 0.6;
+}
+            #title{
+            
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 100;
+	line-height: 26px;
+               text-shadow: 0px 0px 1px ;
+                color: white;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+                
+      #home{
+                margin-left: 20px;
+                margin-top: 10px;
+                font-size: 23px;
+            }
+        #home:hover{
+            width:34px;
+        }
+              #city{
+        float: left;
+        padding-left: 10px;
+       margin-top: 10px;
+      
+        border-radius: 0px 0px 0px 0px;
+        height: 30px;
+       color: darkgray;
+        border: 0;
+        background-color: lightgrey; 
+    }
+    .searchbtn{
+        background-color:darkgray;
+        border: 0;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 0px 5px 5px 0px;
+        width: 3%;
+        opacity: 0.8;
+        padding: 5px;
+    }
+     
+       
+ .dropbtn {
+  
+    background-color:darkgray;
+   
+   border: 0;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.dropdown {
+   
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: lightgray;
+}
+       
+        #category,#cuisine{
+              padding:3px;
+        height: 30px;
+        float: left;
+       margin: 10px;
+        -webkit-appearance: none;
+        border-radius: 5px 0px 0px 5px;
+        
+        font-size: 16px;
+        border: 0;
+        background-color: white;
+    
+        background-color: white;
+        -webkit-appearance: none;
+        }
+         #blog .block{
+                margin-bottom: 20px;
+            }  
+                    #blog .block ul {
+  padding-top: 40px;
+            }
+          
+            
+             #blog ul{        
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        }
+            
+@media all and (min-height: 767px){    
+
+    #blog .block ul li{
+         width: 50%;
+     }
+            }
+    #blog .block .heading {
+        color: #fff;
+        }
+            
+   
+  
+#blog .block ul li {
+  overflow: hidden;
+ 
+  float: left;
+  background: #fff;
+  text-align: center;
+  color: #959595;
+  transform: 1s;
+    height: 250px; 
+     box-shadow: 1px 1px 1px white;
+}
+#blog .block ul li:hover img {
+  transform: scale(1.2) rotate(10deg);
+}
+#blog .block ul li h3 {
+  color: #323232;
+  padding: 0px 0px 10px;
+  line-height: 20px;
+  position: relative;
+}
+#blog .block ul li h3:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 90px;
+  height: 1px;
+  background: #CBC4B5;
+  margin-left: -45px;
+}
+#blog .block ul li p {
+  padding-top: 5px;
+}
+#blog .block ul li .blog-img {
+  float: left;
+  width: 50%;
+
+  background: red;
+  overflow: hidden;
+}
+#blog .block ul li .blog-img img {
+  -webkit-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+     min-height: 100%;
+    min-width: 100%;
+}
+#blog .block ul li .blog-img-2 {
+  width: 50%;
+  float: right;
+  overflow: hidden;
+  
+}
+#blog .block ul li .blog-img-2 img {
+  -webkit-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  min-height: 100%;
+    min-width: 100%;
+}
+#blog .block ul li .content-right {
+ padding: 40px 20px 0;
+  
+   z-index: 999;
+  float: right;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+#blog .block ul li .content-right:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  background: #fff;
+  transform: rotate(45deg);
+  margin-left: -15px;
+}
+#blog .block ul li .content-left {
+  padding: 40px 20px 0;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  z-index: 999;
+}
+#blog .block ul li .content-left:after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 0px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+            
+ @media all and (max-height: 767px){
+    
+     #blog .block ul li{
+         width: 100%;
+     }
+     #mobile .block ul li .content-left,#mobile .block ul li .content-right,#mobile .block ul li .blog-img,#mobile .block ul li .blog-img-2{
+                width:100%;
+            }
+            }
+     
+ 
+               
+            
+          
+        </style>
+    </head>
+    <body>
+       
+   <div class="container-fuild">
+            <div class="row" >
+            <div class="col-xs-1">
+          <a href="index.html">
+              <img src="images/back.png" width="30px" id="home"></a>
+            </div>
+                <div class="col-xs-7"></div>
+                 <select  class="col-xs-2 city" id="city" name="city">
+                     <option value="">Choose City</option><span class="caret"></span> 
+                     <option value="Bangalore">Bangalore</option>
+                     <option value="Delhi">New delhi</option>
+                     <option value="Mumbai">Mumbai</option>
+                     <option value="Pune">Pune</option>
+                     <option value="Chennai">Chennai</option>
+                     <option value="Hyderabad">Hyderabad</option>
+                     <option value="Kolkata">Kolkata</option>
+                  
+                 </select>
+               
+                 
+         <div class="dropdown" >
+             <a href="#">
+                 <button type="button" class="dropbtn"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span></button>   </a>
+  <div class="dropdown-content">
+  
+           <form role="form">
+           
+
+            
+         
+       <select  id="category" name="category">
+                     <option >Category</option><span class="caret"></span>
+                   
+                  
+                     <option value="6">Cafes</option>
+                     <option value="8">Breakfast</option>
+                     <option value="9">Lunch</option>
+                     <option value="10">Dinner</option>
+         <option value="11">Pubs & Bars</option>
+                        
+         <option value="2">Dine-out</option> 
+                 </select>
+
+<br>
+
+    <select  id="cuisine" name="cuisine">
+    <option>Cuisine</option><span class="caret"></span>
+    
+       
+        <option value="5">Bakery</option>
+      
+       
+        <option value="25">Chinese</option>
+        
+        <option value="40">Fast Food</option>
+      
+      
+        <option value="50">North Indian</option>
+       
+        </select> 
+    </form>
+  </div>
+               
+</div>
+
+      <a href="#" id="searchresult">
+                      <button type="submit" id="searchButton" class="searchbtn col-xs-1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </a>
+       
+            </div>
+        </div> 
+    <script type="text/javascript">
+ document.getElementById("searchButton").onclick = function () {
+        $city=  document.getElementById("city").value;
+      //  window.alert($city);
+        if($city=="Delhi"){
+        location.href = "delhi.html";
+        }
+     if($city=="Bangalore"){
+        location.href = "bangalore.html";
+        }
+     if($city=="Chennai"){
+        location.href = "chennai.html";
+        }
+     if($city=="Pune"){
+        location.href = "pune.html";
+        }
+     if($city=="Mumbai"){
+        location.href = "mumbai.html";
+        }
+      if($city=="Hyderabad"){
+        location.href = "Hyderabad.html";
+        }
+     if($city=="Kolkata"){
+        location.href = "Kolkata.html";
+        }
+    };
+</script>
+          <section id="blog">
+        <div class="container" id="desktop">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                       <h1 id="title" class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">Best Restaurants.<span style="font-weight: 700;">Pune</span></h1>
+                        <ul>
+                            <a >
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/5.JPG" class="img-responsive" alt="blog-img" >
+                                </div>
+                                <div class="content-right">
+                                     <h3>Delish</h3>
+                                  <p><span id="cuisine33"> Cuisine</span><br>
+                                        <span id="cuisine3" style="color:lightgrey; font-size:14px; font-weight:300">Bakery, Deserts</span><br><span id="address33">Address</span><br>
+                                        <span id="address3" style="color:lightgrey; font-size:14px; font-weight:300">Wakad, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                     <h3>The French Window Patisserie</h3>
+                                    
+                                    <p><span id="cuisine11"> Cuisine</span><br>
+                                        <span id="cuisine1" style="color:lightgrey; font-size:14px; font-weight:300">Bakery, Deserts</span><br><span id="address11">Address</span><br>
+                                        <span id="address1" style="color:lightgrey; font-size:14px; font-weight:300">Koregaon Park, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/7.JPG" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                        </div></div></div>
+                    <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                                   <ul>
+                            <a href="best_chill_kolkata.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/2.jpg" class="img-responsive" alt="blog-img" height="30px;">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Vohuman Cafe</h3>
+                                  <p><span id="cuisine33"> Cuisine</span><br>
+                                        <span id="cuisine3" style="color:lightgrey; font-size:14px; font-weight:300">Cafe</span><br><span id="address33">Address</span><br>
+                                        <span id="address3" style="color:lightgrey; font-size:14px; font-weight:300">Sassoon Road, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                    <h3>Savya Rasa</h3>
+                                  <p><span id="cuisine44"> Cuisine</span><br>
+                                        <span id="cuisine4" style="color:lightgrey; font-size:14px; font-weight:300">South Indian,Kerala,Andhra,Chettinad,,Mangalorean</span><br><span id="address44">Address</span><br>
+                                        <span id="address4" style="color:lightgrey; font-size:14px; font-weight:300">Koregaon Park, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/17.jpg" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+           <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                      
+                        <ul>
+                            <a >
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/7.png" class="img-responsive" alt="blog-img" >
+                                </div>
+                                <div class="content-right">
+                                    <h3>The French Window Patisserie</h3>
+                                    
+                                    <p><span id="cuisine11"> Cuisine</span><br>
+                                        <span id="cuisine1" style="color:lightgrey; font-size:14px; font-weight:300">Bakery, Deserts</span><br><span id="address11">Address</span><br>
+                                        <span id="address1" style="color:lightgrey; font-size:14px; font-weight:300">Koregaon Park, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                   <h3>Vohuman Cafe</h3>
+                                  <p><span id="cuisine33"> Cuisine</span><br>
+                                        <span id="cuisine3" style="color:lightgrey; font-size:14px; font-weight:300">Cafe</span><br><span id="address33">Address</span><br>
+                                        <span id="address3" style="color:lightgrey; font-size:14px; font-weight:300">Sassoon Road, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/5.png" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                        </div></div></div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                                   <ul>
+                            <a href="best_chill_kolkata.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/2.jpg" class="img-responsive" alt="blog-img" height="30px;">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Baking Company<br><span style="font-size:14px">JW Marriot</span></h3>
+                                    
+                                    <p><span id="cuisine11"> Cuisine</span><br>
+                                        <span id="cuisine1" style="color:lightgrey; font-size:14px; font-weight:300">Cafe,Deserts,Bakery</span><br><span id="address11">Address</span><br>
+                                        <span id="address1" style="color:lightgrey; font-size:14px; font-weight:300">Senapati Bapat Road, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                    <h3>Zarthosti Seva Mandal</h3>
+                                  <p><span id="cuisine44"> Cuisine</span><br>
+                                        <span id="cuisine4" style="color:lightgrey; font-size:14px; font-weight:300">Street Food</span><br><span id="address44">Address</span><br>
+                                        <span id="address4" style="color:lightgrey; font-size:14px; font-weight:300">MG Road, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/17.jpg" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+             <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                                   <ul>
+                            <a href="best_chill_kolkata.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/7.png" class="img-responsive" alt="blog-img" height="30px;">
+                                </div>
+                                <div class="content-right">
+                                    <h3>Sante Spa Cuisine</h3>
+                                  <p><span id="cuisine33"> Cuisine</span><br>
+                                        <span id="cuisine3" style="color:lightgrey; font-size:14px; font-weight:300">Casual Dining-Healthy Food</span><br><span id="address33">Address</span><br>
+                                        <span id="address3" style="color:lightgrey; font-size:14px; font-weight:300">Koregaon Park,Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                    <h3>Garden Vada Pav Centre</h3>
+                                  <p><span id="cuisine44"> Cuisine</span><br>
+                                        <span id="cuisine4" style="color:lightgrey; font-size:14px; font-weight:300">Street Food</span><br><span id="address44">Address</span><br>
+                                        <span id="address4" style="color:lightgrey; font-size:14px; font-weight:300">Camp Area, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/5.png" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+                        <div class="row">
+                <div class="col-xs-12">
+                    <div class="block">
+                     
+                        <ul>
+                            <a >
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
+                                <div class="blog-img">
+                                    <img src="images/2.jpg" class="img-responsive" alt="blog-img" >
+                                </div>
+                                <div class="content-right">
+                                    <h3>Chitale Bandhu Mithaiwale</h3>
+                                    
+                                    <p><span id="cuisine11"> Cuisine</span><br>
+                                        <span id="cuisine1" style="color:lightgrey; font-size:14px; font-weight:300">Sreet Food,Deserts,Mithai</span><br><span id="address11">Address</span><br>
+                                        <span id="address1" style="color:lightgrey; font-size:14px; font-weight:300">Deccan Gymkhana, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                </div>
+                                </li></a>
+                            <a href="best_takeaway_mumbai.php">
+                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
+                                <div class="content-left">
+                                    <h3>Baker's Hut</h3>
+                                   <p><span id="cuisine22"> Cuisine</span><br>
+                                        <span id="cuisine2" style="color:lightgrey; font-size:14px; font-weight:300">Bakery,Deserts</span><br><span id="address22">Address</span><br>
+                                        <span id="address2" style="color:lightgrey; font-size:14px; font-weight:300">Nigdi, Pune</span></p>
+                                    <p><span style="color:lightblue;">MORE<img src="images/arrow.png" height="20px"></span></p>
+                                    
+                                </div>
+                                <div class="blog-img-2">
+                                    <img src="images/17.jpg" alt="blog-img">
+                                </div>
+                                </li></a>
+                           
+                        </ul>
+                        </div></div></div>
+                 
+        </div><!-- .containe close -->
+               
+    </section><!-- #blog close -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" async></script>
+       
+    
+        <div><div class="row" style="margin-top:20px;"></div></div>
+ 
+    </body>
+</html>
